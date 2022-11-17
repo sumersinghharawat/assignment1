@@ -32,7 +32,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/create-product', [ProductController::class, 'create'])->name('product.create');
     Route::get('/update-product/{productid}', [ProductController::class, 'edit'])->name('product.edit');
     Route::post('/store-product', [ProductController::class, 'store'])->name('product.store');
-    Route::put('/update-product/{productid}', [ProductController::class, 'update'])->name('product.update');
+    Route::post('/update-product/{productid}', [ProductController::class, 'update'])->name('product.update');
     Route::get('/delete-product/{productid}', [ProductController::class, 'destroy'])->name('product.delete');
 
 });
